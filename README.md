@@ -101,11 +101,6 @@ A full-stack MERN application that allows users to report, track, and contribute
 .
 ---
 
-## **GitHub Commits**
-- Minimum 15 commits on client-side
-- Minimum 8 commits on server-side
-- Meaningful commit messages explaining features
-
 ---
 
 ## **Instructions**
