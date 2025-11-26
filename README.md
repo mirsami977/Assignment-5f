@@ -98,7 +98,7 @@ A full-stack MERN application that allows users to report, track, and contribute
 - Authentication: Firebase Auth
 - State & Data Fetching: TanStack Query
 - PDF Reports: jsPDF + jspdf-autotable
-
+.
 ---
 
 ## **GitHub Commits**
