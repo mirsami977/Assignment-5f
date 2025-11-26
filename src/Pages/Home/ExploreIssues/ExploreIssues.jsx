@@ -1,4 +1,4 @@
-/*import { useQuery } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import React from "react";
 
@@ -10,7 +10,6 @@ const ExploreIssues = () => {
       return res.data;
     },
   });
-
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-[80vh]">
@@ -21,12 +20,21 @@ const ExploreIssues = () => {
     );
   }
 
-  if (error || !data || !Array.isArray(data)) {
+  if (error) {
     return (
       <div className="flex justify-center items-center h-[80vh]">
         <p className="text-xl font-semibold text-red-500">
-          Failed to load issues:{" "}
-          {error?.message || "Invalid data format or unknown error."}
+          Failed to load issues: {error.message}
+        </p>
+      </div>
+    );
+  }
+
+  if (!data || !Array.isArray(data) || data.length === 0) {
+    return (
+      <div className="flex justify-center items-center h-[80vh]">
+        <p className="text-xl font-semibold text-gray-500">
+          No issues found at the moment.
         </p>
       </div>
     );
@@ -60,4 +68,4 @@ const ExploreIssues = () => {
   );
 };
 
-export default ExploreIssues;*/
+export default ExploreIssues;
